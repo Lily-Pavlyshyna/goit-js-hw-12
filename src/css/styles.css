@@ -1,18 +1,106 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+body {
+  font-family: 'Montserrat Regular', sans-serif;
+  padding: 36px 156px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+* {
+  box-sizing: border-box;
+}
+form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+input {
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  color: #808080;
+  border: 1px solid #808080;
+  outline: none;
+}
+input:hover {
+  border: 1px solid #000;
+}
+input:focus,
+input:active {
+  border: 1px solid #4e75ff;
+  color: #2e2f42;
+}
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background-color: #4e75ff;
+  border: none;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover,
+button:focus {
+  background-color: #6c8cff;
+}
+.loader {
+  text-align: center;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+}
+
+.gallery-item {
+  flex-basis: calc((100% - 48px) / 3);
+  text-decoration: none;
+  border: 1px solid #808080;
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info {
+  padding: 8px;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  cursor: unset;
+}
+.info {
+  display: flex;
+  gap: 32px;
+  color: #2e2f42;
+  justify-content: space-around;
+}
+.info b {
+  display: block;
+  line-height: 1.33333;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.simple-lightbox {
+  background-color: rgba(46, 47, 66, 0.8);
+}
+.load-more {
+  margin: 32px auto 0;
+  width: 125px;
+}
